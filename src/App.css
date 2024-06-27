@@ -1,38 +1,112 @@
+/* Global styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App-footer {
+  background-color: #282c34;
+  padding: 20px; /* Increased padding for more space */
+  color: white;
+  width: 100%;
+  margin-top: auto;
+}
+
+.container {
+  padding: 20px;
+  flex: 1;
+}
+
+.my-4 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-danger {
+  color: #dc3545;
+}
+
+.search-bar .form-group {
+  margin-bottom: 0.5rem;
+}
+
+.search-bar .form-control {
+  width: auto;
+  display: inline-block;
+}
+
+.date-selector .form-group {
+  margin-bottom: 0.5rem;
+}
+
+.date-selector .form-control {
+  width: auto;
+  display: inline-block;
+}
+
+.temperature-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.humidity {
+  margin-top: 10px;
+}
+
+.air-quality-container {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .App-header h1 {
+    font-size: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .container {
+    padding: 10px;
+  }
+
+  .temperature-icons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .humidity {
+    flex-direction: column;
+    align-items: center;
   }
 }
